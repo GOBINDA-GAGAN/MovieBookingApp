@@ -3,12 +3,13 @@ node_modules/
 
 # Environment files
 .env
-
+MovieSeeder.js
 # Logs
 logs
 *.log
 npm-debug.log*
-Seeder.js
+
+TestData/
 
 # Runtime data
 pids

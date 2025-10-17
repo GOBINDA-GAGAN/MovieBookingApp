@@ -2,9 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
-import userRouter from "./routes/user.routes.js";
+import userRouters from "./routes/user.routes.js";
+import movieRoutes from "./routes/movie.route.js"
 import cookieParser from "cookie-parser";
 import HTTP_STATUS from "./utils/httpStatuscode.js";
+
 
 dotenv.config();
 connectDB();
@@ -24,7 +26,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
-app.use("/api/v1", userRouter);
+app.use("/api/v1", userRouters);
+app.use("/api/v1/movies", movieRoutes);
 
 
 
